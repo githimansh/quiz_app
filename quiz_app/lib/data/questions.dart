@@ -21,7 +21,7 @@ import 'package:quiz_app/models/quiz_question.dart';
     'What\'s the purpose of a StatefulWidget?',
     [
       'Update UI as data changes',
-      'Update data as UI changes',
+      'Delete data as UI changes',
       'Ignore data changes',
       'Render UI that does not depend on data',
     ],
