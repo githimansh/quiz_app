@@ -18,7 +18,8 @@ List<Map<String, Object>>getSummaryData () {
   final List<Map<String, Object>> summary = [];
 
   for(var i = 0; i < chosenAnswers.length; i++){
-    summary.add({
+    summary.add(
+      {
       'question_index': i,
       'question': question[i].text,
       'correct_answer': question[i].answers[0],
@@ -48,12 +49,20 @@ List<Map<String, Object>>getSummaryData () {
           children:  [
             Text(
               'You answered $numCOrrectQuestions out of $numTotalQuestion questions correctly!',),
-           const SizedBox(height: 30,),
+           const SizedBox(
+            height: 30,
+            ),
            QuestionsSummary(summaryData),
-            const SizedBox(height: 30,),
-            TextButton(
-              onPressed: () {}, 
-              child: const Text('Restart Quiz!'),
+            const SizedBox(
+              height: 30,
+              ),
+            TextButton.icon(
+              onPressed: onRestart,
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white
+              ), 
+              icon: const Icon(Icons.refresh),
+              label: const Text('Restart Quiz!'),
               )
 
           ],
